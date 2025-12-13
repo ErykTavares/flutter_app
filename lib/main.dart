@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/shared/widgets/box_widget.dart';
+import 'package:flutter_app/shared/widgets/color_box.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +30,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,9 +42,9 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           spacing: 20,
           children: <Widget>[
-            BoxWidget(color: Colors.red, text: '1'),
-            BoxWidget(color: Colors.purple, text: '2'),
-            BoxWidget(color: Colors.blue, text: '3'),
+            ColorBox(color: Colors.red, text: '1'),
+            ColorBox(color: Colors.purple, text: '2'),
+            ColorBox(color: Colors.blue, text: '3'),
           ],
         ),
       ),
