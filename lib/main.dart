@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/shared/widgets/box_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +30,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -43,34 +43,9 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           spacing: 20,
           children: <Widget>[
-            Container(
-              width: 200,
-              height: 200,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.red,
-              ),
-              child: const Text(
-                '1',
-                style: TextStyle(color: Colors.white, fontSize: 20),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            Container(
-              width: 200,
-              height: 200,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.purple,
-              ),
-              child: const Text(
-                '2',
-                style: TextStyle(color: Colors.white, fontSize: 20),
-                textAlign: TextAlign.center,
-              ),
-            ),
+            BoxWidget(color: Colors.red, text: '1'),
+            BoxWidget(color: Colors.purple, text: '2'),
+            BoxWidget(color: Colors.blue, text: '3'),
           ],
         ),
       ),
