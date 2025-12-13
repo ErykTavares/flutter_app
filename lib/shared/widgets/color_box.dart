@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/shared/widgets/color_box_text.dart';
 
-class BoxWidget extends StatelessWidget {
+class ColorBox extends StatelessWidget {
   final Color color;
   final String text;
 
-  const BoxWidget({super.key, required this.color, required this.text});
+  const ColorBox({super.key, required this.color, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +17,9 @@ class BoxWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         color: color,
       ),
-      child: Text(
-        text,
-        style: TextStyle(color: Colors.white, fontSize: 20),
-        textAlign: TextAlign.center,
+      child: ColorBoxText(
+        text: text,
+        textStyle: TextStyle(color: Colors.black87, fontSize: 20),
       ),
     );
   }
