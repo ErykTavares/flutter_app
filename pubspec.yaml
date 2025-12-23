@@ -58,9 +58,10 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/HD-wallpaper-berserk-guts-badass-anime-thumbnail.jpg
+    - assets/images/new-berserk-wallpapers-upscaled-to-8k-then-compressed-to-5-v0-z0120ermi47f1.jpg
+    - assets/images/the-black-swordsman-berserk-thumb-728x410.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
