@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+const double sizeBoxHeight = 80;
+
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
 
@@ -12,7 +14,7 @@ class MainScreen extends StatelessWidget {
           width: double.maxFinite,
           height: double.infinity,
           alignment: Alignment.center,
-          padding: const EdgeInsets.symmetric(vertical: 150, horizontal: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 10),
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topLeft,
@@ -28,9 +30,10 @@ class MainScreen extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
-              spacing: 40,
               children: [
+                const SizedBox(height: sizeBoxHeight),
                 Image.asset('assets/images/quiz_logo.png', width: 300),
+                const SizedBox(height: sizeBoxHeight),
                 const Text(
                   "Learn Flutter the fun way!",
                   style: TextStyle(
@@ -39,6 +42,7 @@ class MainScreen extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
+                const SizedBox(height: sizeBoxHeight),
                 ElevatedButton(
                   style: ButtonStyle(
                     alignment: Alignment.center,
