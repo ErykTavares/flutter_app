@@ -32,7 +32,11 @@ class MainScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(height: sizeBoxHeight),
-                Image.asset('assets/images/quiz_logo.png', width: 300),
+                Image.asset(
+                  'assets/images/quiz_logo.png',
+                  width: 300,
+                  color: const Color.fromARGB(206, 255, 255, 255),
+                ),
                 const SizedBox(height: sizeBoxHeight),
                 const Text(
                   "Learn Flutter the fun way!",
@@ -45,7 +49,9 @@ class MainScreen extends StatelessWidget {
                 const SizedBox(height: 30),
                 ElevatedButton.icon(
                   style: ButtonStyle(
-                    foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
+                    foregroundColor: WidgetStateProperty.all<Color>(
+                      Colors.white,
+                    ),
                     alignment: Alignment.center,
                     backgroundColor: WidgetStateProperty.all<Color>(
                       Color.fromARGB(255, 198, 30, 18),
