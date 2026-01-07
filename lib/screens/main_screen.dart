@@ -42,7 +42,7 @@ class MainScreen extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
-                const SizedBox(height: sizeBoxHeight),
+                const SizedBox(height: 30),
                 ElevatedButton(
                   style: ButtonStyle(
                     alignment: Alignment.center,
