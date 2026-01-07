@@ -9,34 +9,29 @@ class MainScreen extends StatelessWidget {
       appBar: AppBar(backgroundColor: Color.fromARGB(255, 157, 18, 8)),
       body: SafeArea(
         child: Container(
-          width: double.infinity,
+          width: double.maxFinite,
           height: double.infinity,
-          child: Container(
-            width: double.maxFinite,
-            height: double.infinity,
-            alignment: Alignment.center,
-            padding: const EdgeInsets.symmetric(vertical: 150, horizontal: 10),
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  Color.fromARGB(255, 157, 18, 8),
-                  Color.fromARGB(255, 198, 30, 18),
-                ],
-              ),
+          alignment: Alignment.center,
+          padding: const EdgeInsets.symmetric(vertical: 150, horizontal: 10),
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Color.fromARGB(255, 157, 18, 8),
+                Color.fromARGB(255, 198, 30, 18),
+              ],
             ),
+          ),
+          child: Center(
             child: Column(
+              mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               spacing: 40,
               children: [
-                Image.asset(
-                  'assets/images/quiz_logo.png',
-                  width: 300,
-                  height: 300,
-                ),
-                Text(
+                Image.asset('assets/images/quiz_logo.png', width: 300),
+                const Text(
                   "Learn Flutter the fun way!",
                   style: TextStyle(
                     fontSize: 24,
