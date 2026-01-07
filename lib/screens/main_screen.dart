@@ -43,8 +43,9 @@ class MainScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 30),
-                ElevatedButton(
+                ElevatedButton.icon(
                   style: ButtonStyle(
+                    foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
                     alignment: Alignment.center,
                     backgroundColor: WidgetStateProperty.all<Color>(
                       Color.fromARGB(255, 198, 30, 18),
@@ -55,10 +56,11 @@ class MainScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  onPressed: () => {},
-                  child: const Text(
+                  onPressed: () {},
+                  icon: const Icon(Icons.arrow_right_alt, size: 25),
+                  label: const Text(
                     "Start Quiz",
-                    style: TextStyle(fontSize: 20, color: Colors.white),
+                    style: TextStyle(fontSize: 20),
                   ),
                 ),
               ],
