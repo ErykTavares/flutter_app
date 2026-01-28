@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/screens/quiz_screen.dart';
+import 'package:flutter_app/shared/widgets/quiz.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: seedColor),
         appBarTheme: const AppBarTheme(backgroundColor: seedColor),
       ),
-      home: Scaffold(appBar: AppBar(), body: QuizScreen()),
+      home: Scaffold(appBar: AppBar(), body: const Quiz()),
     );
   }
 }
