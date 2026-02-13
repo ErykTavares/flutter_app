@@ -19,12 +19,15 @@ final questions = [
     "Update data as UI changes",
     "Render UI that does not depend on data",
   ]),
-  QuisQuestion("Which widget should you try use more often: StateFullWidget or StateLessWidget?", const [
-    "StateLessWidget",
-    "StateFullWidget",
-    "Both are used equally",
-    "None of the above",
-  ]),
+  QuisQuestion(
+    "Which widget should you try use more often: StateFullWidget or StateLessWidget?",
+    const [
+      "StateLessWidget",
+      "StateFullWidget",
+      "Both are used equally",
+      "None of the above",
+    ],
+  ),
   QuisQuestion("What happens if you change data in a StateLessWidget?", const [
     "The UI is not updated",
     "The UI is updated",
