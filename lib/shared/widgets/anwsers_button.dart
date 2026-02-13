@@ -11,6 +11,7 @@ class AnswersButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
+        fixedSize: Size.fromWidth(double.infinity),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         padding: EdgeInsets.symmetric(vertical: 10, horizontal: 40),
       ),
