@@ -13,11 +13,19 @@ class QuestionScreen extends StatefulWidget {
 }
 
 class _QuestionScreenState extends State<QuestionScreen> {
+  var currentQuestionIndex = 0;
+
+  void answerQuestion() {
+    setState(() {
+      currentQuestionIndex++;
+    });
+  }
+
   @override
   Widget build(context) {
-    final currentQuestion = questions[0];
+    final currentQuestion = questions[currentQuestionIndex];
     final answersButtonList = currentQuestion.getShuffledAnswers().map(
-      (item) => AnswersButton(text: item, onPressed: () {}),
+      (item) => AnswersButton(text: item, onPressed: answerQuestion),
     );
 
     return Layout(
