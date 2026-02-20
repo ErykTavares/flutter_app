@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/shared/widgets/layout.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key, required this.switchScreen});
@@ -18,15 +19,15 @@ class HomeScreen extends StatelessWidget {
             Image.asset(
               'assets/images/quiz_logo.png',
               width: 300,
-              color: const Color.fromARGB(206, 255, 255, 255),
+              color: const Color.fromARGB(255, 236, 195, 195),
             ),
             const SizedBox(height: 80),
-            const Text(
+            Text(
               "Learn Flutter the fun way!",
-              style: TextStyle(
+              style: GoogleFonts.lato(
                 fontSize: 24,
                 fontWeight: FontWeight.w500,
-                color: Colors.white,
+                color: const Color.fromARGB(255, 236, 195, 195),
               ),
             ),
             const SizedBox(height: 30),
