@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/data/questions.dart';
 import 'package:flutter_app/screens/home_screen.dart';
 import 'package:flutter_app/screens/questions_screen.dart';
 
@@ -13,6 +14,7 @@ class Quiz extends StatefulWidget {
 
 class _QuizState extends State<Quiz> {
   var activeScreen = 'home-screen';
+  List<String> selectedAnswers = [];
   late bool isHomeScreen;
 
   @override
@@ -34,12 +36,24 @@ class _QuizState extends State<Quiz> {
     }
   }
 
+  void chooseAnswer(String answer) {
+    selectedAnswers.add(answer);
+
+    if (selectedAnswers.length == questions.length) {
+      setState(() {
+        activeScreen = 'home-screen';
+        isHomeScreen = true;
+        selectedAnswers = [];
+      });
+    }
+  }
+
   @override
   Widget build(context) {
     Widget currentScreen = HomeScreen(switchScreen: switchScreen);
 
     if (activeScreen == 'question-screen') {
-      currentScreen = const QuestionScreen();
+      currentScreen = QuestionScreen(onSelectAnswer: chooseAnswer);
     }
 
     return PopScope(
