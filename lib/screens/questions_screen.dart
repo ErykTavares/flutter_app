@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/shared/widgets/answers_button.dart';
 import 'package:flutter_app/shared/widgets/layout.dart';
 import 'package:flutter_app/data/questions.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class QuestionScreen extends StatefulWidget {
   const QuestionScreen({super.key});
@@ -38,9 +39,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
           Text(
             currentQuestion.text,
             textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 18,
-              color: Colors.white,
+            style: GoogleFonts.lato(
+              fontSize: 24,
+              color: const Color.fromARGB(255, 236, 195, 195),
               fontWeight: FontWeight.bold,
             ),
           ),
