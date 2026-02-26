@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/shared/widgets/button.dart';
 import 'package:flutter_app/shared/widgets/layout.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -31,22 +32,10 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 30),
-            ElevatedButton.icon(
-              style: ButtonStyle(
-                foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
-                alignment: Alignment.center,
-                backgroundColor: WidgetStateProperty.all<Color>(
-                  Color.fromARGB(255, 198, 30, 18),
-                ),
-                shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                ),
-              ),
+            Button(
+              text: "Start Quiz",
               onPressed: switchScreen,
-              icon: const Icon(Icons.arrow_right_alt, size: 25),
-              label: const Text("Start Quiz", style: TextStyle(fontSize: 20)),
+              icon: Icons.arrow_right_alt,
             ),
           ],
         ),
