@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/data/questions.dart';
 import 'package:flutter_app/screens/home_screen.dart';
 import 'package:flutter_app/screens/questions_screen.dart';
+import 'package:flutter_app/screens/results_screen.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({super.key});
@@ -41,8 +42,7 @@ class _QuizState extends State<Quiz> {
 
     if (selectedAnswers.length == questions.length) {
       setState(() {
-        activeScreen = 'home-screen';
-        isHomeScreen = true;
+        activeScreen = 'results-screen';
         selectedAnswers = [];
       });
     }
@@ -54,6 +54,9 @@ class _QuizState extends State<Quiz> {
 
     if (activeScreen == 'question-screen') {
       currentScreen = QuestionScreen(onSelectAnswer: chooseAnswer);
+    }
+    if (activeScreen == 'results-screen') {
+      currentScreen = const ResultsScreen();
     }
 
     return PopScope(
