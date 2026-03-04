@@ -29,7 +29,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
   @override
   Widget build(context) {
     final currentQuestion = questions[currentQuestionIndex];
-    final answersButtonList = currentQuestion.getShuffledAnswers().map(
+    final answersButtonList = currentQuestion.shuffledAnswers.map(
       (item) => AnswersButton(text: item, onPressed: () => answerQuestion(item)),
     );
 
