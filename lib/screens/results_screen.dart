@@ -14,7 +14,7 @@ class ResultsScreen extends StatelessWidget {
   final List<String> chosenAnswers;
   final VoidCallback onRestart;
 
-  List<Map<String, Object>> getSummaryData() {
+  List<Map<String, Object>> get summaryData {
     return List.generate(chosenAnswers.length, (i) {
       final currentQuestion = questions[i];
 
@@ -29,11 +29,10 @@ class ResultsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final summaryData = getSummaryData();
     final totalQuestions = questions.length;
-    final correctAnswers = summaryData.where((item) {
-      return item['chosen_answer'] == item['correct_answer'];
-    }).length;
+    final correctAnswers = summaryData
+        .where((item) => item['chosen_answer'] == item['correct_answer'])
+        .length;
 
     return Layout(
       child: Center(
