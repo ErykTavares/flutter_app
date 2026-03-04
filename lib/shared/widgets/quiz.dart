@@ -31,6 +31,14 @@ class _QuizState extends State<Quiz> {
     });
   }
 
+  void restartQuiz() {
+    setState(() {
+      selectedAnswers = [];
+      activeScreen = 'home-screen';
+      isHomeScreen = true;
+    });
+  }
+
   void handleOnPopInvoked(bool didPop, result) {
     if (!didPop && !isHomeScreen) {
       switchScreen();
@@ -43,7 +51,6 @@ class _QuizState extends State<Quiz> {
     if (selectedAnswers.length == questions.length) {
       setState(() {
         activeScreen = 'results-screen';
-        selectedAnswers = [];
       });
     }
   }
@@ -56,7 +63,10 @@ class _QuizState extends State<Quiz> {
       currentScreen = QuestionScreen(onSelectAnswer: chooseAnswer);
     }
     if (activeScreen == 'results-screen') {
-      currentScreen = const ResultsScreen();
+      currentScreen = ResultsScreen(
+        chosenAnswers: selectedAnswers,
+        onRestart: restartQuiz,
+      );
     }
 
     return PopScope(
